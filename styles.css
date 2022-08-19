@@ -24,20 +24,16 @@ body {
 
 .texts {
     width: 60%;
-    height: 100%;
-    padding: 4rem 0 0 10rem;
+    padding: 0 80px;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-header {
-    margin-bottom: 4rem;
-}
-
-.header-img {
+.header-image {
     background-position: left;
     background-repeat: no-repeat;
     background-size: contain;
     width: 200px;
+    padding: 60px 0;
 }
 
 h1 {
@@ -47,6 +43,7 @@ h1 {
     line-height: 1;
     color: hsl(0, 6%, 24%);
     font-weight: 400;
+    margin: .5rem 0;
 }
 
 span {
@@ -55,10 +52,10 @@ span {
 }
 
 p {
-    margin: 1.5rem 0 1.5rem 0;
     line-height: 1.6;
     font-size: 18px;
     color: hsl(0, 36%, 70%);
+    margin: 20px 0;
 }
 
 form {
@@ -145,4 +142,74 @@ form.error small {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+.bg-mobile {
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .texts {
+        width: 100%;
+        padding: 0 0 5rem 0;
+        height: 100%;
+    }
+
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+        width: 100%;
+    }
+
+    .right {
+        display: none;
+    }
+    .bg-mobile {
+        display: block;
+        width: calc(100% + 0px);
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-bottom: 2rem;
+        padding: 0;
+        height: fit-content;
+
+    }
+    .header-image {
+        width: 100px;
+        padding: 30px 0;
+        margin-left: 2rem;
+    }
+    p {
+        font-size: 13px;
+        text-align: center;
+        width: 88%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    form {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    input {
+        padding: 12px 30px;
+        width: 100%;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    button {
+        padding: 12px;
+        width: 50px;
+        position: absolute;
+        height: 45px;
+        top: 0;
+        left: -5;
+    }
+    .inner {
+        width: inherit;
+    }
+    
 }
